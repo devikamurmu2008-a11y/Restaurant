@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="menu-page">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu | The Krishna Garden</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- PAGE CSS -->
+  <link rel="stylesheet" href="assets/css/menu.css">
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- =========  NAVIGATION (same as index)  ========= -->
+<header class="navbar" role="banner">
+  <div class="container nav-container">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/images/logo.png" alt="The Krishna Garden logo" width="150" height="60">
+    </a>
+
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" role="menubar">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link active" href="menu.html" aria-current="page">Menu</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li><a class="nav-link" href="events.html">Events</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+      <li><a class="nav-link btn btn-primary btn-sm" href="reservations.html">Reserve Table</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section class="menu-hero">
+    <div class="container">
+      <h1>Our Menu</h1>
+      <p>Hand-ground spices, seasonal produce and recipes passed down for generations.</p>
+    </div>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <div class="menu-filters">
+    <div class="container filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="starters">Starters</button>
+      <button class="filter-btn" data-filter="mains">Mains</button>
+      <button class="filter-btn" data-filter="desserts">Desserts</button>
+      <button class="filter-btn" data-filter="beverages">Beverages</button>
+    </div>
+  </div>
+
+  <!-- ===== SEARCH & SORT ===== -->
+  <section class="container" style="padding-top:4rem">
+    <div class="flex flex-wrap justify-between items-center" style="gap:1rem">
+      <div class="menu-search">
+        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+        <input class="search-input" type="search" placeholder="Search dishes…">
+      </div>
+
+      <div class="flex items-center" style="gap:1rem">
+        <label for="price-range">Max price&nbsp;<span class="price-display">$100</span></label>
+        <input id="price-range" type="range" min="5" max="100" step="5" value="100">
+        <select class="sort-select form-select" aria-label="Sort menu">
+          <option value="">Sort by</option>
+          <option value="price-low">Price – low → high</option>
+          <option value="price-high">Price – high → low</option>
+          <option value="name">Name A-Z</option>
+          <option value="popular">Most popular</option>
+        </select>
+      </div>
+    </div>
+    <p class="results-count" style="margin-top:1rem">—</p>
+  </section>
+
+  <!-- ===== MENU GRID ===== -->
+  <section class="menu-section container">
+    <div class="menu-grid">
+
+      <!-- Example item -->
+      <article class="menu-item" data-category="starters" data-dietary="vegetarian,gluten-free" data-popularity="91">
+        <div class="menu-item-image">
+          <img src="assets/images/samosa.jpg" alt="Crispy vegetable samosas">
+          <div class="dietary-tags">
+            <span class="tag vegetarian">Veg</span>
+            <span class="tag gluten-free">GF</span>
+          </div>
+        </div>
+
+        <div class="menu-item-content">
+          <header class="menu-item-header">
+            <h3 class="menu-item-title">Veg Samosa</h3>
+            <span class="menu-item-price">$6.50</span>
+          </header>
+          <p class="menu-item-description">Golden-fried pastry filled with spiced potatoes & peas.</p>
+          <footer class="menu-item-footer">
+            <div class="spice-level">
+              <span class="spice-dot"></span><span class="spice-dot"></span>
+            </div>
+            <div class="menu-item-actions">
+              <button class="btn-icon" aria-label="Add to favourites"><i class="far fa-heart"></i></button>
+            </div>
+          </footer>
+        </div>
+      </article>
+
+      <!-- Repeat <article> blocks for every menu item, adjusting data-attributes and tags -->
+      <!-- … -->
+    </div>
+
+    <p class="no-results" style="display:none;text-align:center;margin-top:2rem;font-weight:600">
+      No items match your filters.
+    </p>
+  </section>
+
+  <!-- ===== STATISTICS ===== -->
+  <section class="menu-stats">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <p class="stat-number" data-count="48">0</p>
+        <p class="stat-label">Items on menu</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-number" data-count="18">0</p>
+        <p class="stat-label">Vegetarian options</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-number" data-count="5">0</p>
+        <p class="stat-label">Chef specials</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHEF RECOMMENDATIONS ===== -->
+  <section class="chef-recommendations">
+    <div class="container">
+      <h2 class="section-title">Chef&nbsp;Raj’s Recommendations</h2>
+      <div class="recommendation-grid">
+        <div class="recommendation-card">
+          <h3>Butter Chicken</h3>
+          <p>Succulent tandoori chicken simmered in velvety tomato-cashew gravy.</p>
+        </div>
+        <div class="recommendation-card">
+          <h3>Lamb Rogan Josh</h3>
+          <p>Saffron-infused Kashmiri curry slow-cooked for eight hours.</p>
+        </div>
+        <div class="recommendation-card">
+          <h3>Paneer Lababdar</h3>
+          <p>Cottage cheese cubes in rich onion-tomato masala, finished with fenugreek.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- =========  FOOTER  ========= -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer-content">
+    <!-- identical footer sections as index.html -->
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2025 The Krishna Garden</p>
+    <a href="privacy.html">Privacy</a> · <a href="accessibility.html">Accessibility</a>
+  </div>
+</footer>
+
+<!-- GLOBAL JS -->
+<script src="assets/js/main.js" defer></script>
+<!-- PAGE JS -->
+<script src="assets/js/menu-filter.js" defer></script>
+</body>
+</html>

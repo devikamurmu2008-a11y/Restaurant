@@ -1,0 +1,89 @@
+/* ========================================
+   GALLERY PAGE STYLES
+======================================== */
+
+/* Page Hero */
+.page-hero {
+  padding: 6rem 1rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #B8965F 0%, #D4A574 100%);
+}
+.page-hero h1 {
+  font-size: 3rem;
+  font-family: var(--font-primary);
+  margin: 0;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 4rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Modal Overlay (if used) */
+.image-modal .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.image-modal .modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+.image-modal .modal-image {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+.image-modal .modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: var(--text-2xl);
+  line-height: 1;
+  padding: var(--space-2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid img {
+    height: 180px;
+  }
+}
+

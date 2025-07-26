@@ -1,0 +1,87 @@
+/* ========================================
+   RESERVATIONS PAGE STYLES
+======================================== */
+
+/* Hero Section */
+.reservation-page .page-hero {
+  background: linear-gradient(135deg, #0e0600 0%, #160c01 100%);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem;
+  
+
+}
+.reservation-page .page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-primary);
+}
+.reservation-page .page-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Form Container */
+.reservation-content {
+  background: #FEFCF8;
+  padding: 4rem 1rem;
+}
+.reservation-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.reservation-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+.reservation-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.reservation-form .form-label {
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+  color: var(--neutral-800);
+}
+.reservation-form .form-input,
+.reservation-form .form-select,
+.reservation-form .form-textarea {
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--border-radius);
+  padding: var(--space-3) var(--space-4);
+  font-family: inherit;
+  transition: border-color var(--transition-base);
+}
+.reservation-form .form-input:focus,
+.reservation-form .form-select:focus,
+.reservation-form .form-textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(212,165,116,0.2);
+}
+
+/* Button */
+.reservation-form .btn-primary {
+  width: 100%;
+  padding: var(--space-4) 0;
+  font-size: var(--text-lg);
+  margin-top: var(--space-6);
+}
+
+/* Validation Errors */
+.reservation-form .field-error {
+  color: var(--error);
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .reservation-page .page-hero {
+    padding: 4rem 1rem;
+  }
+  .reservation-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}

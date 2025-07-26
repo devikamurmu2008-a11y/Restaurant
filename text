@@ -1,0 +1,35 @@
+/the-krishna-garden
+│
+├── index.html
+├── menu.html
+├── about.html
+├── gallery.html
+├── events.html
+├── reservations.html
+├── contact.html
+├── privacy.html
+├── accessibility.html
+│
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── js
+│   │   └── script.js
+│   └── images
+│       ├── logo.png
+│       ├── hero-image.jpg
+│       ├── restaurant-interior.jpg
+│       ├── butter-chicken.jpg
+│       ├── biryani.jpg
+│       ├── dal-makhani.jpg
+│       ├── samosa.jpg
+│       ├── chicken-tikka.jpg
+│       ├── paneer-tikka.jpg
+│       ├── vegetable-biryani.jpg
+│       ├── gulab-jamun.jpg
+│       ├── kulfi.jpg
+│       ├── mango-lassi.jpg
+│       ├── chai.jpg
+│       ├── chef-raj.jpg
+│       ├── chef-priya.jpg
+│       └── manager-arjun.jpg
